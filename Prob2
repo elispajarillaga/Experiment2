@@ -1,0 +1,23 @@
+// A program that computes a customer’s water bill.
+// Problem 2
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    int wd = 35, gallon, unpaid ;
+    float cu = 1.10 ;
+    
+    cout << "How many gallons were used? " ; cin >> gallon ;
+    cout << "How much is the unpaid balance? " ; cin >> unpaid ;
+    
+    if (unpaid == 0)
+        cout << "Total Amount: P" << ((gallon * cu) + wd) ;
+    
+    else if (unpaid > 0)
+        cout << "Total Amount : P" << ((gallon * cu) + wd + 20) ;
+    
+    return 0;
+}
