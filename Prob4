@@ -1,0 +1,28 @@
+// A program that will accept three numbers as input and display the LARGEST number of the three.
+// Problem 4
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float n1, n2, n3;
+    
+    cout << "Enter three numbers: \n" ;
+    cin >> n1 >> n2 >> n3 ;
+    
+    if (n1 >= n2 && n1 >= n3)
+    {
+        cout << "The largest of the three numbers is " << n1 ;
+    }
+    if (n2 >= n1 && n2 >= n3)
+    {
+        cout << "The largest of the three number is " << n2 ;
+    }
+    if (n3 >= n1 && n3 >= n2)
+    {
+        cout << "The largest of the three number is " << n3 ;
+    }
+    
+    return 0;
+}
