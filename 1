@@ -1,0 +1,59 @@
+// A program that calculates a customer's monthly bill.
+// Problem 1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char choice = '\0';
+    int hrs;
+    
+    cout << "------------------------------------------------------ \n" ;
+    cout << "PACKAGE A: For P995/mo 10 hours of access are provided. Additional hours are P20/hr. \n" ;
+    cout << "PACKAGE B: For 1495/mo 20 hours of access are provided. Additional hours are 10/hr. \n" ;
+    cout << "PACKAGE C: For 1995/mo of unlimited access is provided. \n" ;
+    cout << "------------------------------------------------------\n" ;
+    cout << "Type 'A' if package A, Type 'B' if package B, Type 'C' if package C \n" ;
+    cout << "Which Internet package are you subscribed to? \n" ; cin >> choice ;
+    cout << "How many hours were used? " ; cin >> hrs ;
+    
+    switch(choice)
+    {
+        case 'A':
+        case 'a':
+            if (hrs <= 10)
+            {
+                cout << "Total Amount Due: P995" ;
+            }
+            else if (hrs > 10)
+            {
+                cout << "Hours exceeded: " << (hrs - 10) << "hour/s \n" ;
+                cout << "Total Amount Due: " << ((hrs - 10) *20)+995 ;
+            }
+            break;
+            
+        case 'B':
+        case 'b':
+            if (hrs <= 20)
+            {
+                cout << "Total Amount Due: P1495" ;
+            }
+            else if (hrs > 20)
+            {
+                cout << "Hours exceeded: " << (hrs - 20) << "hour/s \n" ;
+                cout << "Total Amount Due: " << ((hrs - 20) *10)+1495 ;
+            }
+            break;
+            
+        case 'C':
+        case 'c':
+            if (hrs > 0)
+            {
+                cout << "Total Amount Due: P1995" ;
+            }
+            break;
+    }
+    
+    return 0;
+}
+
