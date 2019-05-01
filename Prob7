@@ -1,0 +1,35 @@
+// A program that will generate the sum of all whole numbers starting from 1 up to a given number.
+// Problem 7
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    int i, num, sum = 0 ;
+    
+    cout << "Enter a number: " ; cin >> num ;
+    
+    for (;;)
+    {
+        if (num > 0)
+        {
+            sum = 0;
+        for (i = 1; i <= num; i++)
+        {
+            sum = sum + i;
+        }
+        
+        cout << "The sum of all whole numbers from 1 to " << num << " is " << sum << "\n" ;
+        cout << "Enter a number: " ; cin >> num ;
+        }
+        
+            else if (num <= 0)
+            {
+            cout << "Thank You!";
+            break;
+            }
+    }
+    return 0;
+}
