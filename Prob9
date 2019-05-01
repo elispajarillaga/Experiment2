@@ -1,0 +1,23 @@
+// A program that will draw a box using "*" characters given its dimensions in rows and columns.
+// Problem 9
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int column, row;
+    
+    cout << "How many rows? " ; cin >> row ;
+    cout << "How many columns? " ; cin >> column ;
+    
+    for (int c = 1; c <= column; c ++)
+    {
+        for(int r = 1; r <= row; r ++)
+        {
+            cout << "*" ;
+        }
+        cout << "\n" ;
+    }
+    return 0;
+}
